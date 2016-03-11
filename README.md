@@ -1,6 +1,6 @@
 # Docker image for php-fpm7
 
-[![](https://badge.imagelayers.io/yavin/alpine-php-fpm:latest.svg)](https://imagelayers.io/?images=yavin/alpine-php-fpm:latest)
+[![](https://badge.imagelayers.io/yavin/alpine-php-fpm:latest.svg)](https://imagelayers.io/?images=naerymdan/docker-alpine-php-fpm7:latest)
 
 Tags:
 * `latest` [Dokerfile](https://github.com/naerymdan/docker-alpine-php-fpm7/blob/master/Dockerfile)
@@ -14,7 +14,8 @@ docker run --rm -p 9000:9000 naerymdan/alpine-php-fpm:docker-alpine-php-fpm7
 ```
 
 nginx configuration to connect to this FPM setup:
-<pre>
+
+```
 server {
     # some other configuration...
 
@@ -23,7 +24,7 @@ server {
         <b>fastcgi_pass  fpm-host-name:9000</b>;
     }
 }
-</pre>
+```
 
 The PHP FPM is listening on port 9000 from all clients. Make sure you do not expose the port to the public.
 
